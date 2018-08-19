@@ -14,9 +14,7 @@ export default function CountReducer(
     case "update":
       const val = Number(wish_value);
 
-      if (isNaN(val)) {
-        return { count: "No number" };
-      }
+      if (isNaN(val)) return { count: "No number" };
 
       return {
         count: Number(val)
