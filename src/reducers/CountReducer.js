@@ -12,12 +12,13 @@ export default function CountReducer(
         wish_value: Number(count) + 1
       };
     case "update":
-      const val = Number(wish_value);
+      const val = parseInt(wish_value);
 
-      if (isNaN(val)) return { count: "No number" };
+      if (isNaN(val)) return { count: "No number",   wish_value: 0 };
 
       return {
-        count: Number(val)
+        count: val,
+        wish_value: val
       };
     default:
       return state;
