@@ -10,7 +10,6 @@ const initialStoreState = {
     CountReducer: {count: 123, wish_value: 12}
 };
 
-
 let store = createStore(combinedReducers, initialStoreState);
 
 export default store;
